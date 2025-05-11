@@ -1,0 +1,65 @@
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
+
+const Hero: React.FC = () => {
+  return (
+    <section id="home" className="relative min-h-screen bg-gradient-to-r from-blue-700 to-purple-700 flex items-center">
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute w-96 h-96 bg-blue-400 opacity-20 rounded-full -top-20 -left-20"></div>
+        <div className="absolute w-80 h-80 bg-purple-400 opacity-20 rounded-full top-40 -right-10"></div>
+        <div className="absolute w-64 h-64 bg-pink-400 opacity-20 rounded-full bottom-20 left-1/4"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 md:px-6 z-10 py-20">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="text-white max-w-xl">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <span className="block transform transition-all hover:scale-105 hover:text-blue-300 duration-300">Crafting Stunning</span>
+              <span className="block transform transition-all hover:scale-105 hover:text-blue-200 delay-75 duration-300">Websites for</span>
+              <span className="block transform transition-all hover:scale-105 hover:text-blue-100 delay-150 duration-300">Local Businesses</span>
+            </h1>
+            <p className="text-lg md:text-xl opacity-90 mb-8 leading-relaxed">
+              We help small business owners establish a powerful online presence without the tech overwhelm. Stand out from competitors with a website that truly represents your brand.
+            </p>
+            
+            <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+              <button className="bg-white text-blue-700 hover:bg-blue-50 font-semibold px-6 py-3 rounded-md transition-all hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center">
+                Get Your Free Demo
+                <ArrowRight size={18} className="ml-2" />
+              </button>
+              <button className="border-2 border-white text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-md transition-all flex items-center justify-center">
+                View Our Work
+              </button>
+            </div>
+          </div>
+          
+          <div className="relative hidden md:block">
+            <div className="relative bg-white p-4 rounded-lg shadow-2xl transform rotate-3 transition-transform hover:rotate-0 duration-500">
+              <img 
+                src="https://images.pexels.com/photos/196644/pexels-photo-196644.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
+                alt="Website example" 
+                className="rounded w-full" 
+              />
+              <div className="absolute -bottom-3 -right-3 bg-blue-600 text-white px-4 py-2 rounded-md text-sm font-semibold">
+                Café Website
+              </div>
+            </div>
+            
+            <div className="absolute top-1/4 -left-12 bg-white p-3 rounded-lg shadow-xl transform -rotate-6 transition-transform hover:rotate-0 duration-500">
+              <img 
+                src="https://images.pexels.com/photos/1029599/pexels-photo-1029599.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940" 
+                alt="Mobile design" 
+                className="w-24 h-auto rounded" 
+              />
+              <div className="absolute -bottom-2 -right-2 bg-purple-600 text-white px-3 py-1 rounded text-xs font-semibold">
+                Mobile-First
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
