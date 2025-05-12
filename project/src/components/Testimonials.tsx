@@ -13,39 +13,30 @@ interface Testimonial {
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Sarah Johnson",
-    business: "Sunrise Café",
+    name: "Nooe Saba",
+    business: "Miraz by Noor",
     image: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    quote: "SiteCraft transformed our outdated website into a beautiful online experience. Our online orders have increased by 60% since the new site launched!",
+    quote: "SiteCraft designed an e-commerce site that perfectly captures our boutique's style. Sales have doubled and customers love browsing our collections online.",
     rating: 5,
-    businessType: "Café"
+    businessType: "Boutique"
   },
   {
     id: 2,
-    name: "Michael Rodriguez",
+    name: "Animesh Krishnan",
     business: "Elite Fitness Gym",
-    image: "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+    image: "/images/client1.jpeg",
     quote: "The team at SiteCraft made the process so easy. They understood exactly what our gym needed, and we've seen a 40% increase in new membership inquiries.",
     rating: 5,
     businessType: "Gym"
   },
   {
-    id: 3,
-    name: "Jennifer Taylor",
-    business: "Glamour Hair Salon",
-    image: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    quote: "Our salon website is gorgeous and so easy to update. Our clients love the online booking feature, and we've reduced no-shows by 25%!",
-    rating: 5,
-    businessType: "Salon"
-  },
-  {
     id: 4,
-    name: "David Chen",
+    name: "Navneet Kumar",
     business: "Urban Thread Boutique",
-    image: "https://images.pexels.com/photos/614810/pexels-photo-614810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    quote: "SiteCraft designed an e-commerce site that perfectly captures our boutique's style. Sales have doubled and customers love browsing our collections online.",
+    image: "/images/client2.jpeg",
+    quote: "SiteCraft transformed our outdated website into a beautiful online experience. Our online orders have increased by 60% since the new site launched!",
     rating: 5,
-    businessType: "Boutique"
+    businessType: "Cafe"
   }
 ];
 

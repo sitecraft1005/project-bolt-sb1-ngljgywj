@@ -88,7 +88,10 @@ const Portfolio: React.FC = () => {
                   </div>
                 )}
                 
-                <button className="mt-4 text-blue-600 font-medium hover:text-blue-800 transition-colors flex items-center">
+                <button 
+                  onClick={() => window.location.href = `#/project/${item.id}`}
+                  className="mt-4 text-yellow-600 font-medium hover:text-yellow-800 transition-colors flex items-center"
+                >
                   View Project
                   <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
