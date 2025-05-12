@@ -66,20 +66,7 @@ const Features: React.FC = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="inline-block bg-blue-50 text-blue-800 font-semibold py-2 px-4 rounded-full text-sm mb-4">
-            All websites include:
-          </div>
-          <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-            {["Custom domain setup", "SSL security", "Google Analytics", "Contact forms", 
-              "Social media integration", "Local business schema", "Image optimization", "Unlimited revisions"].map((item, i) => (
-              <div key={i} className="bg-white border border-gray-200 rounded-full py-2 px-4 text-sm text-gray-700 flex items-center">
-                <div className="w-2 h-2 bg-blue-600 rounded-full mr-2"></div>
-                {item}
-              </div>
-            ))}
-          </div>
-        </div>
+        
       </div>
     </section>
   );

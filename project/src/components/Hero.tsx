@@ -3,28 +3,28 @@ import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="home" className="relative min-h-screen bg-gradient-to-r from-blue-700 to-purple-700 flex items-center">
+    <section id="home" className="relative min-h-screen bg-gradient-to-r from-yellow-500 to-yellow-600 flex items-center">
       <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-96 h-96 bg-blue-400 opacity-20 rounded-full -top-20 -left-20"></div>
-        <div className="absolute w-80 h-80 bg-purple-400 opacity-20 rounded-full top-40 -right-10"></div>
-        <div className="absolute w-64 h-64 bg-pink-400 opacity-20 rounded-full bottom-20 left-1/4"></div>
+        <div className="absolute w-96 h-96 bg-yellow-400 opacity-20 rounded-full -top-20 -left-20"></div>
+        <div className="absolute w-80 h-80 bg-yellow-300 opacity-20 rounded-full top-40 -right-10"></div>
+        <div className="absolute w-64 h-64 bg-yellow-200 opacity-20 rounded-full bottom-20 left-1/4"></div>
       </div>
       
       <div className="container mx-auto px-4 md:px-6 z-10 py-20">
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="text-white max-w-xl">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
-              <span className="block transform transition-all hover:scale-105 hover:text-blue-300 duration-300">Crafting Stunning</span>
-              <span className="block transform transition-all hover:scale-105 hover:text-blue-200 delay-75 duration-300">Websites for</span>
-              <span className="block transform transition-all hover:scale-105 hover:text-blue-100 delay-150 duration-300">Local Businesses</span>
+              <span className="block transform transition-all hover:scale-105 hover:text-yellow-300 duration-300">Crafting Stunning</span>
+              <span className="block transform transition-all hover:scale-105 hover:text-yellow-200 delay-75 duration-300">Websites for</span>
+              <span className="block transform transition-all hover:scale-105 hover:text-yellow-100 delay-150 duration-300">Local Businesses</span>
             </h1>
             <p className="text-lg md:text-xl opacity-90 mb-8 leading-relaxed">
               We help small business owners establish a powerful online presence without the tech overwhelm. Stand out from competitors with a website that truly represents your brand.
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="bg-white text-blue-700 hover:bg-blue-50 font-semibold px-6 py-3 rounded-md transition-all hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center">
-                Get Your Free Demo
+              <button className="bg-white text-yellow-600 hover:bg-yellow-50 font-semibold px-6 py-3 rounded-md transition-all hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center">
+                See Plans & Pricing
                 <ArrowRight size={18} className="ml-2" />
               </button>
               <button className="border-2 border-white text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-md transition-all flex items-center justify-center">

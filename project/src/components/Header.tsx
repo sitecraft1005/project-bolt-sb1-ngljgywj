@@ -21,15 +21,20 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-3' : 'bg-transparent py-5'
+        isScrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
         <div className="flex items-center">
-          <div className="text-2xl font-bold text-blue-600">
-            <span className="mr-1">Site</span>
-            <span className={`${isScrolled ? 'text-gray-800' : 'text-white'}`}>Craft</span>
-          </div>
+          <img 
+            src="/images/logo2.png"
+            alt="SiteCraft Logo" 
+            className="h-13 md:h-13 w-[60px] object-contain"
+            onError={(e) => {
+              console.error('Error loading logo:', e);
+              e.currentTarget.style.display = 'none';
+            }}
+          />
         </div>
 
         {/* Desktop Navigation */}
@@ -38,21 +43,21 @@ const Header: React.FC = () => {
             <a 
               key={item} 
               href={`#${item.toLowerCase()}`}
-              className={`font-medium transition-colors hover:text-blue-600 ${
+              className={`font-medium transition-colors hover:text-yellow-600 ${
                 isScrolled ? 'text-gray-800' : 'text-white'
               }`}
             >
               {item}
             </a>
           ))}
-          <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg">
-            Get Started
+          <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg">
+           Contact to Explore
           </button>
         </nav>
 
         {/* Mobile Menu Button */}
         <button 
-          className="md:hidden text-blue-600" 
+          className="md:hidden text-yellow-500" 
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -67,14 +72,14 @@ const Header: React.FC = () => {
               <a 
                 key={item} 
                 href={`#${item.toLowerCase()}`}
-                className="text-gray-800 font-medium transition-colors hover:text-blue-600"
+                className="text-gray-800 font-medium transition-colors hover:text-yellow-600"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item}
               </a>
             ))}
-            <button className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg">
-              Get Started
+            <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg">
+              See Plans & Pricing
             </button>
           </nav>
         </div>

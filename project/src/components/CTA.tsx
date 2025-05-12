@@ -63,7 +63,7 @@ const CTA: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-r from-blue-600 to-purple-700 text-white">
+    <section id="contact" className="py-20 bg-gradient-to-r from-yellow-500 to-yellow-600 text-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -128,8 +128,8 @@ const CTA: React.FC = () => {
           
           <div className="bg-white rounded-xl shadow-xl overflow-hidden text-gray-800">
             <div className="p-8">
-              <h3 className="text-2xl font-bold mb-1">Get Your Free Demo</h3>
-              <p className="text-gray-600 mb-6">Fill out the form and we'll get back to you within 24 hours.</p>
+              <h3 className="text-2xl font-bold mb-1">See Plans & Pricing</h3>
+              <p className="text-gray-600 mb-6">Fill out the form and we'll get back to you with pricing options.</p>
               
               {isSubmitted ? (
                 <div className="text-center py-8">
@@ -227,11 +227,11 @@ const CTA: React.FC = () => {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className={`w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-4 rounded-md transition-all flex items-center justify-center group ${
+                    className={`w-full bg-yellow-500 hover:bg-yellow-600 text-white font-semibold py-3 px-4 rounded-md transition-all flex items-center justify-center group ${
                       isSubmitting ? 'opacity-75 cursor-not-allowed' : ''
                     }`}
                   >
-                    {isSubmitting ? 'Submitting...' : 'Get Your Free Demo'}
+                    {isSubmitting ? 'Submitting...' : 'See Plans & Pricing'}
                     {!isSubmitting && (
                       <ArrowRight size={18} className="ml-2 group-hover:translate-x-1 transition-transform" />
                     )}

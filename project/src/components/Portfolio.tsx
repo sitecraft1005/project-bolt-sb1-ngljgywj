@@ -10,22 +10,7 @@ interface PortfolioItem {
 }
 
 const portfolioData: PortfolioItem[] = [
-  {
-    id: 1,
-    type: "Café",
-    title: "Morning Brew Café",
-    description: "Modern website with online ordering and menu management.",
-    image: "https://images.pexels.com/photos/1855214/pexels-photo-1855214.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    features: ["Mobile ordering", "Menu updates", "Reservations", "Photo gallery"]
-  },
-  {
-    id: 2,
-    type: "Salon",
-    title: "Elegance Hair Studio",
-    description: "Sophisticated site with booking system and style portfolios.",
-    image: "https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    features: ["Online booking", "Stylist profiles", "Service menu", "Client reviews"]
-  },
+  
   {
     id: 3,
     type: "Gym",
@@ -37,7 +22,7 @@ const portfolioData: PortfolioItem[] = [
   {
     id: 4,
     type: "Boutique",
-    title: "Urban Chic Clothing",
+    title: "Miraz By Noor",
     description: "Fashion-forward e-commerce site with inventory management.",
     image: "https://images.pexels.com/photos/1884584/pexels-photo-1884584.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     features: ["E-commerce", "Inventory system", "Fashion blog", "Gift cards"]
@@ -50,14 +35,7 @@ const portfolioData: PortfolioItem[] = [
     image: "https://images.pexels.com/photos/6205791/pexels-photo-6205791.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
     features: ["Order forms", "Product gallery", "Catering info", "Testimonials"]
   },
-  {
-    id: 6,
-    type: "Dental",
-    title: "Bright Smile Dental",
-    description: "Professional site with patient portal and service information.",
-    image: "https://images.pexels.com/photos/3845810/pexels-photo-3845810.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    features: ["Patient portal", "Service details", "Staff profiles", "FAQs"]
-  }
+  
 ];
 
 const Portfolio: React.FC = () => {
