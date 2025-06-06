@@ -21,7 +21,7 @@ const Header: React.FC = () => {
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
-        isScrolled ? 'bg-white shadow-md py-4' : 'bg-transparent py-6'
+        isScrolled ? 'bg-white shadow-md py-2' : 'bg-transparent py-3'
       }`}
     >
       <div className="container mx-auto px-4 md:px-6 flex justify-between items-center">
@@ -29,7 +29,7 @@ const Header: React.FC = () => {
           <img 
             src="/images/logo2.png"
             alt="SiteCraft Logo" 
-            className="h-19 md:h-19 w-[60px] object-contain"
+            className="h-12 md:h-16 w-auto object-contain"
             onError={(e) => {
               console.error('Error loading logo:', e);
               e.currentTarget.style.display = 'none';
@@ -38,21 +38,29 @@ const Header: React.FC = () => {
         </div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
-          {['Home', 'Portfolio', 'Services', 'Process', 'Testimonials', 'Contact'].map((item) => (
-            <a 
-              key={item} 
-              href={`#${item.toLowerCase()}`}
-              className={`font-medium transition-colors hover:text-yellow-600 ${
-                isScrolled ? 'text-gray-800' : 'text-white'
-              }`}
-            >
-              {item}
-            </a>
-          ))}
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg">
-           Contact to Explore
-          </button>
+        <nav className="hidden md:flex items-center space-x-8">
+          <div className="flex space-x-8">
+            {['Home', 'Portfolio', 'Services', 'Process', 'Testimonials', 'Contact'].map((item) => (
+              <a 
+                key={item} 
+                href={`#${item.toLowerCase()}`}
+                className={`font-medium transition-colors hover:text-yellow-600 ${
+                  isScrolled ? 'text-gray-800' : 'text-white'
+                }`}
+              >
+                {item}
+              </a>
+            ))}
+          </div>
+          
+          {/* Vertical Contact Button */}
+          <div className="ml-4">
+            <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-3 py-6 rounded-md transition-all hover:shadow-lg transform hover:scale-105 writing-mode-vertical text-sm font-semibold tracking-wider">
+              <span className="transform rotate-90 whitespace-nowrap inline-block origin-center">
+                CONTACT TO EXPLORE
+              </span>
+            </button>
+          </div>
         </nav>
 
         {/* Mobile Menu Button */}
@@ -78,8 +86,8 @@ const Header: React.FC = () => {
                 {item}
               </a>
             ))}
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg">
-              See Plans & Pricing
+            <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg text-left">
+              Contact to Explore
             </button>
           </nav>
         </div>
