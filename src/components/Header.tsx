@@ -29,7 +29,7 @@ const Header: React.FC = () => {
           <img 
             src="/images/logo2.png"
             alt="SiteCraft Logo" 
-            className="h-13 md:h-13 w-[60px] object-contain"
+            className="h-13 md:h-13 w-[90px] object-contain"
             onError={(e) => {
               console.error('Error loading logo:', e);
               e.currentTarget.style.display = 'none';
