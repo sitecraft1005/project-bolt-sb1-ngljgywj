@@ -1,11 +1,3 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-/* Custom styles for vertical text button */
-@layer utilities {
-  .writing-mode-vertical {
-    writing-mode: horizontal-rl;
-    text-orientation: mixed;
-  }
-}
