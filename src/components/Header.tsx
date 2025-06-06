@@ -59,7 +59,7 @@ const Header: React.FC = () => {
             onClick={handlePricingClick}
             className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg"
           >
-            Contact Us Now
+            Contact Us
           </button>
         </nav>
 
