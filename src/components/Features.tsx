@@ -42,7 +42,7 @@ const featuresData: Feature[] = [
 
 const Features: React.FC = () => {
   return (
-    <section id="services" className="py-12 sm:py-16 lg:py-20">
+    <section id="services\" className="py-12 sm:py-16 lg:py-20">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-12 sm:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 px-4">
