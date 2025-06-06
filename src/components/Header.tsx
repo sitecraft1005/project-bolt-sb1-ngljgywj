@@ -18,6 +18,11 @@ const Header: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const handlePricingClick = () => {
+    window.location.hash = '#pricing';
+    setIsMenuOpen(false);
+  };
+
   return (
     <header 
       className={`fixed w-full z-50 transition-all duration-300 ${
@@ -50,8 +55,11 @@ const Header: React.FC = () => {
               {item}
             </a>
           ))}
-          <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg">
-           Contact to Explore
+          <button 
+            onClick={handlePricingClick}
+            className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg"
+          >
+            See Plans & Pricing
           </button>
         </nav>
 
@@ -78,7 +86,10 @@ const Header: React.FC = () => {
                 {item}
               </a>
             ))}
-            <button className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg">
+            <button 
+              onClick={handlePricingClick}
+              className="bg-yellow-500 hover:bg-yellow-600 text-white px-4 py-2 rounded-md transition-all hover:shadow-lg"
+            >
               See Plans & Pricing
             </button>
           </nav>

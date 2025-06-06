@@ -49,8 +49,12 @@ const processSteps: Step[] = [
 ];
 
 const Process: React.FC = () => {
+  const handleStartProject = () => {
+    window.location.hash = '#pricing';
+  };
+
   return (
-    <section id="process\" className="py-20">
+    <section id="process" className="py-20">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Our Simple 3-Step Process</h2>
@@ -101,8 +105,11 @@ const Process: React.FC = () => {
 
         <div className="mt-16 text-center">
           <p className="text-gray-600 mb-6">Ready to start your project? Let's create something amazing together.</p>
-          <button className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-md transition-all hover:shadow-lg transform hover:-translate-y-1">
-            Start Your Project
+          <button 
+            onClick={handleStartProject}
+            className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-md transition-all hover:shadow-lg transform hover:-translate-y-1"
+          >
+            See Plans & Pricing
           </button>
         </div>
       </div>

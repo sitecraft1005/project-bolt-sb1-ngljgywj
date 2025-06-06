@@ -2,6 +2,17 @@ import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
 const Hero: React.FC = () => {
+  const handlePricingClick = () => {
+    window.location.hash = '#pricing';
+  };
+
+  const handlePortfolioClick = () => {
+    const portfolioSection = document.getElementById('portfolio');
+    if (portfolioSection) {
+      portfolioSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <section id="home" className="relative min-h-screen bg-gradient-to-r from-yellow-500 to-yellow-600 flex items-center">
       <div className="absolute inset-0 overflow-hidden">
@@ -23,11 +34,17 @@ const Hero: React.FC = () => {
             </p>
             
             <div className="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
-              <button className="bg-white text-yellow-600 hover:bg-yellow-50 font-semibold px-6 py-3 rounded-md transition-all hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center">
+              <button 
+                onClick={handlePricingClick}
+                className="bg-white text-yellow-600 hover:bg-yellow-50 font-semibold px-6 py-3 rounded-md transition-all hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center"
+              >
                 See Plans & Pricing
                 <ArrowRight size={18} className="ml-2" />
               </button>
-              <button className="border-2 border-white text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-md transition-all flex items-center justify-center">
+              <button 
+                onClick={handlePortfolioClick}
+                className="border-2 border-white text-white hover:bg-white/10 font-semibold px-6 py-3 rounded-md transition-all flex items-center justify-center"
+              >
                 View Our Work
               </button>
             </div>

@@ -5,6 +5,7 @@ import Portfolio from './components/Portfolio';
 import Features from './components/Features';
 import Testimonials from './components/Testimonials';
 import Process from './components/Process';
+import Pricing from './components/Pricing';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import ProjectDetail from './components/ProjectDetail';
@@ -12,6 +13,7 @@ import './styles/animations.css';
 
 function App() {
   const [currentProject, setCurrentProject] = useState<string | null>(null);
+  const [currentView, setCurrentView] = useState<'home' | 'pricing'>('home');
 
   useEffect(() => {
     // Update page title
@@ -46,8 +48,13 @@ function App() {
       const hash = window.location.hash;
       if (hash.startsWith('#/project/')) {
         setCurrentProject(hash.replace('#/project/', ''));
+        setCurrentView('home');
+      } else if (hash === '#pricing' || hash === '#plans') {
+        setCurrentView('pricing');
+        setCurrentProject(null);
       } else {
         setCurrentProject(null);
+        setCurrentView('home');
       }
     };
 
@@ -66,8 +73,16 @@ function App() {
             onBack={() => {
               window.location.hash = '#portfolio';
               setCurrentProject(null);
+              setCurrentView('home');
             }}
           />
+        ) : currentView === 'pricing' ? (
+          <>
+            <Pricing />
+            <div className="scroll-animation opacity-0">
+              <CTA />
+            </div>
+          </>
         ) : (
           <>
             <Hero />
