@@ -113,7 +113,7 @@ const CTA: React.FC = () => {
                   <Mail size={16} className="sm:w-5 sm:h-5" />
                 </div>
                 <a href="mailto:connect@sitecraft.com" className="text-blue-100 hover:text-white transition-colors text-sm sm:text-base">
-                  connect@sitecraft.com
+                  connect@sitecraft.shop
                 </a>
               </div>
               
