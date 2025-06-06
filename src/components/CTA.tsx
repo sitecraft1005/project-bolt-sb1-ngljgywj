@@ -111,7 +111,7 @@ const CTA: React.FC = () => {
                   <Mail size={20} />
                 </div>
                 <a href="mailto:hello@sitecraft.com" className="text-blue-100 hover:text-white transition-colors">
-                  hello@sitecraft.com
+                  connect@sitecraft.com
                 </a>
               </div>
               
@@ -120,7 +120,7 @@ const CTA: React.FC = () => {
                   <Phone size={20} />
                 </div>
                 <a href="tel:+15551234567" className="text-blue-100 hover:text-white transition-colors">
-                  (555) 123-4567
+                  +91 76338 80806
                 </a>
               </div>
             </div>
