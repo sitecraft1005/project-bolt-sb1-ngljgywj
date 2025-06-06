@@ -57,7 +57,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen overflow-hidden">
       <Header />
       <main>
         {currentProject ? (
