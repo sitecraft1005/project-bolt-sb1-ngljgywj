@@ -58,31 +58,34 @@ const Testimonials: React.FC = () => {
   const testimonial = testimonialData[currentIndex];
 
   return (
-    <section id="testimonials" className="py-20 bg-gray-50">
-      <div className="container mx-auto px-4 md:px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">What Our Clients Say</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+    <section id="testimonials" className="py-12 sm:py-16 lg:py-20 bg-gray-50">
+      <div className="container mx-auto px-4 sm:px-6">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 px-4">
+            What Our Clients Say
+          </h2>
+          <p className="text-base sm:text-lg text-gray-600 max-w-2xl mx-auto px-4">
             We've helped numerous local businesses transform their online presence. Here's what they have to say.
           </p>
         </div>
 
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
-            <div className="md:flex">
-              <div className="md:w-2/5 relative">
+          <div className="bg-white rounded-2xl shadow-xl overflow-hidden mx-4 sm:mx-0">
+            <div className="flex flex-col lg:flex-row">
+              {/* Image Section */}
+              <div className="lg:w-2/5 relative h-64 sm:h-80 lg:h-auto">
                 <div className="absolute inset-0 bg-gradient-to-br from-blue-600 to-purple-600 opacity-90"></div>
                 <img 
                   src={testimonial.image} 
                   alt={testimonial.name} 
                   className="w-full h-full object-cover mix-blend-overlay"
                 />
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <div className="flex mb-1">
+                <div className="absolute bottom-0 left-0 right-0 p-4 sm:p-6 text-white">
+                  <div className="flex mb-2">
                     {[...Array(5)].map((_, i) => (
                       <svg 
                         key={i} 
-                        className={`w-5 h-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`} 
+                        className={`w-4 h-4 sm:w-5 sm:h-5 ${i < testimonial.rating ? 'text-yellow-400' : 'text-gray-300'}`} 
                         fill="currentColor" 
                         viewBox="0 0 20 20"
                       >
@@ -90,28 +93,31 @@ const Testimonials: React.FC = () => {
                       </svg>
                     ))}
                   </div>
-                  <div className="text-white text-lg font-bold">{testimonial.name}</div>
-                  <div className="text-blue-200">{testimonial.business}</div>
-                  <span className="inline-block bg-white/20 text-sm px-3 py-1 rounded-full mt-2">
+                  <div className="text-white text-lg sm:text-xl font-bold">{testimonial.name}</div>
+                  <div className="text-blue-200 text-sm sm:text-base">{testimonial.business}</div>
+                  <span className="inline-block bg-white/20 text-xs sm:text-sm px-3 py-1 rounded-full mt-2">
                     {testimonial.businessType}
                   </span>
                 </div>
               </div>
               
-              <div className="md:w-3/5 p-8 md:p-10 flex flex-col justify-center">
-                <svg className="w-10 h-10 text-blue-100 mb-4" fill="currentColor" viewBox="0 0 24 24">
+              {/* Content Section */}
+              <div className="lg:w-3/5 p-6 sm:p-8 lg:p-10 flex flex-col justify-center">
+                <svg className="w-8 h-8 sm:w-10 sm:h-10 text-blue-100 mb-4" fill="currentColor" viewBox="0 0 24 24">
                   <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
                 </svg>
-                <p className="text-gray-700 text-lg italic leading-relaxed mb-6">
+                <p className="text-gray-700 text-base sm:text-lg italic leading-relaxed mb-6">
                   {testimonial.quote}
                 </p>
-                <div className="mt-auto flex justify-between items-center">
+                
+                {/* Navigation Controls */}
+                <div className="flex justify-between items-center">
                   <div className="flex space-x-2">
                     {testimonialData.map((_, index) => (
                       <button
                         key={index}
-                        className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                          currentIndex === index ? 'bg-blue-600 w-8' : 'bg-gray-300'
+                        className={`w-2 h-2 sm:w-2.5 sm:h-2.5 rounded-full transition-all duration-300 ${
+                          currentIndex === index ? 'bg-blue-600 w-6 sm:w-8' : 'bg-gray-300'
                         }`}
                         onClick={() => handleDotClick(index)}
                         aria-label={`View testimonial ${index + 1}`}
@@ -125,7 +131,7 @@ const Testimonials: React.FC = () => {
                       onClick={() => setCurrentIndex((currentIndex - 1 + testimonialData.length) % testimonialData.length)}
                       aria-label="Previous testimonial"
                     >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                       </svg>
                     </button>
@@ -134,7 +140,7 @@ const Testimonials: React.FC = () => {
                       onClick={() => setCurrentIndex((currentIndex + 1) % testimonialData.length)}
                       aria-label="Next testimonial"
                     >
-                      <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <svg className="w-4 h-4 sm:w-5 sm:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                       </svg>
                     </button>
