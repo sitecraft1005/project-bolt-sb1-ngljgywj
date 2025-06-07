@@ -34,7 +34,7 @@ const Hero: React.FC = () => {
               We help small business owners establish a powerful online presence without the tech overwhelm. Stand out from competitors with a website that truly represents your brand.
             </p>
             
-            <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 px-4 lg:px-0">
+            <div className="flex flex-col sm:flex-row gap-4 sm:gap-4 justify-center lg:justify-start">
               <button 
                 onClick={handlePricingClick}
                 className="bg-white text-yellow-600 hover:bg-yellow-50 font-semibold px-6 py-3 sm:py-4 rounded-md transition-all hover:shadow-lg transform hover:-translate-y-1 flex items-center justify-center text-sm sm:text-base"
