@@ -98,48 +98,42 @@ const Features: React.FC = () => {
           {featuresData.map((feature, index) => (
             <div 
               key={index} 
-              className={`group relative bg-white/80 backdrop-blur-sm p-8 sm:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-700 border border-gray-100/50 mx-2 sm:mx-0 hover-lift ${
+              className={`group relative bg-white p-8 sm:p-10 rounded-3xl shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-100 mx-2 sm:mx-0 transform hover:-translate-y-2 hover:scale-105 ${
                 isVisible ? 'animate-slideUp' : 'opacity-0'
               }`}
               style={{animationDelay: `${index * 0.15}s`}}
               onMouseEnter={() => setHoveredIndex(index)}
               onMouseLeave={() => setHoveredIndex(null)}
             >
-              {/* Gradient background on hover */}
+              {/* Subtle background glow on hover */}
               <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500 rounded-3xl`}></div>
               
               {/* Icon container */}
-              <div className={`relative mb-6 inline-block p-4 bg-gradient-to-br ${feature.color} rounded-2xl shadow-lg transform transition-all duration-500 group-hover:scale-110 group-hover:rotate-3`}>
+              <div className={`relative mb-6 inline-block p-4 bg-gradient-to-br ${feature.color} rounded-2xl shadow-lg transform transition-all duration-500 group-hover:scale-110`}>
                 <div className="text-white">
                   {React.cloneElement(feature.icon as React.ReactElement, {
                     size: window.innerWidth < 640 ? 28 : 32
                   })}
                 </div>
-                
-                {/* Floating particles */}
-                <div className={`absolute -top-1 -right-1 w-3 h-3 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-all duration-500 animate-pulse`}></div>
-                <div className={`absolute -bottom-1 -left-1 w-2 h-2 bg-white rounded-full opacity-0 group-hover:opacity-100 transition-all duration-700 animate-pulse`} style={{animationDelay: '0.2s'}}></div>
               </div>
               
-              <h3 className={`text-xl sm:text-2xl font-bold text-gray-900 mb-4 transition-all duration-300 ${
-                hoveredIndex === index ? 'text-transparent bg-gradient-to-r bg-clip-text ' + feature.color : ''
-              }`}>
+              {/* Title - Always visible with good contrast */}
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-4 transition-colors duration-300 group-hover:text-gray-800 relative z-10">
                 {feature.title}
               </h3>
               
-              <p className="text-gray-600 text-sm sm:text-base leading-relaxed transition-all duration-300 group-hover:text-gray-700">
+              {/* Description - Always visible with good contrast */}
+              <p className="text-gray-600 text-sm sm:text-base leading-relaxed transition-colors duration-300 group-hover:text-gray-700 relative z-10">
                 {feature.description}
               </p>
-
-              {/* Animated border */}
-              <div className={`absolute inset-0 rounded-3xl border-2 border-transparent bg-gradient-to-r ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500`} style={{padding: '2px'}}>
-                <div className="w-full h-full bg-white rounded-3xl"></div>
-              </div>
 
               {/* Hover indicator */}
               <div className={`absolute top-4 right-4 w-8 h-8 bg-gradient-to-r ${feature.color} rounded-full flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-500 transform scale-0 group-hover:scale-100`}>
                 <Sparkles size={16} className="text-white animate-pulse" />
               </div>
+
+              {/* Bottom accent line */}
+              <div className={`absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r ${feature.color} opacity-0 group-hover:opacity-100 transition-opacity duration-500 rounded-b-3xl`}></div>
             </div>
           ))}
         </div>
@@ -147,11 +141,11 @@ const Features: React.FC = () => {
         {/* Bottom CTA */}
         <div className={`text-center mt-16 transition-all duration-1000 ${isVisible ? 'animate-fadeIn' : 'opacity-0'}`} style={{animationDelay: '1s'}}>
           <div className="bg-gradient-to-r from-blue-600 to-purple-600 rounded-3xl p-8 sm:p-12 text-white mx-4 sm:mx-0">
-            <h3 className="text-2xl sm:text-3xl font-bold mb-4 animate-neon">Ready to Get Started?</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold mb-4">Ready to Get Started?</h3>
             <p className="text-blue-100 mb-6 text-lg">Let's build something amazing together</p>
             <button 
               onClick={() => window.location.hash = '#contact'}
-              className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2 animate-pulse-custom"
+              className="bg-white text-blue-600 hover:bg-blue-50 font-bold px-8 py-4 rounded-xl transition-all duration-300 hover:shadow-2xl transform hover:-translate-y-2"
             >
               Start Your Project
             </button>
