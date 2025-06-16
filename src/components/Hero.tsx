@@ -28,8 +28,13 @@ const Hero: React.FC = () => {
         <div className="absolute w-24 h-24 sm:w-40 sm:h-40 lg:w-56 lg:h-56 bg-gradient-to-r from-purple-400 to-pink-500 opacity-20 rounded-full animate-float animate-morphing top-20 -right-5 sm:top-40 sm:-right-10" style={{animationDelay: '1s'}}></div>
         <div className="absolute w-20 h-20 sm:w-32 sm:h-32 lg:w-48 lg:h-48 bg-gradient-to-r from-blue-400 to-cyan-500 opacity-20 rounded-full animate-float animate-morphing bottom-10 left-1/4 sm:bottom-20" style={{animationDelay: '2s'}}></div>
         
-        {/* Grid pattern */}
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg width=\"60\" height=\"60\" viewBox=\"0 0 60 60\" xmlns=\"http://www.w3.org/2000/svg\"%3E%3Cg fill=\"none\" fill-rule=\"evenodd\"%3E%3Cg fill=\"%239C92AC\" fill-opacity=\"0.1\"%3E%3Ccircle cx=\"30\" cy=\"30\" r=\"1\"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-30"></div>
+        {/* Grid pattern - Fixed SVG */}
+        <div 
+          className="absolute inset-0 opacity-30"
+          style={{
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='1'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+          }}
+        ></div>
         
         {/* Glowing particles */}
         <div className="absolute top-1/4 left-1/3 w-2 h-2 bg-yellow-400 rounded-full animate-pulse opacity-60"></div>
@@ -147,7 +152,6 @@ const Hero: React.FC = () => {
         </div>
       </div>
     </section>
-  )
   );
 };
 
